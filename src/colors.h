@@ -27,6 +27,46 @@ void fcolors_reset(FILE* out) {
   fflush(out);
 }
 
+void colors_bold(void) {
+  printf("%s", "\x1b[1m");
+}
+
+void fcolors_bold(FILE* out) {
+  fprintf(out, "%s", "\x1b[1m");
+}
+
+void colors_underline(void) {
+  printf("%s", "\x1b[4m");
+}
+
+void fcolors_underline(FILE* out) {
+  fprintf(out, "%s", "\x1b[4m");
+}
+
+void colors_blink(void) {
+  printf("%s", "\x1b[5m");
+}
+
+void fcolors_blink(FILE* out) {
+  fprintf(out, "%s", "\x1b[5m");
+}
+
+void colors_reversed(void) {
+  printf("%s", "\x1b[7m");
+}
+
+void fcolors_reversed(FILE* out) {
+  fprintf(out, "%s", "\x1b[7m");
+}
+
+void colors_invisible(void) {
+  printf("%s", "\x1b[8m");
+}
+
+void fcolors_invisible(FILE* out) {
+  printf(out, "%s", "\x1b[8m");
+}
+
 void colors_black(void) {
   printf("%s", "\x1b[30m");
 }
