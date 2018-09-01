@@ -8,11 +8,13 @@
 
 void colors_clear(void) {
   printf("%s", "\x1b[2J\x1b[1;1H");
+  // Clear should apply immediately, so flush.
   fflush(stdout);
 }
 
 void fcolors_clear(FILE* out) {
   fprintf(out, "%s", "\x1b[2J\x1b[1;1H");
+  // Clear should apply immediately, so flush.
   fflush(out);
 }
 
@@ -24,6 +26,7 @@ void colors_reset(void) {
 
 void fcolors_reset(FILE* out) {
   fprintf(out, "%s", "\x1b[0m");
+  // Reset should apply immediately, so flush.
   fflush(out);
 }
 
@@ -208,13 +211,11 @@ void fcolors_256(FILE* out, unsigned int num) {
 void colors_bg_256(unsigned int val) {
   assert(val < 256);
   printf("%s%d%s", "\x1b[48;5;", val, "m");
-  fflush(stdout);
 }
 
 void fcolors_bg_256(FILE* out, unsigned int val) {
   assert(val < 256);
   fprintf(out, "%s%d%s", "\x1b[48;5;", val, "m");
-  fflush(out);
 }
 
 void colors_bg_black(void) {
