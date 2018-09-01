@@ -5,7 +5,7 @@
 
 // Semantic Versioning
 int vmajor = 1;
-int vminor = 0;
+int vminor = 1;
 int vpatch = 0;
 
 // Note:
@@ -34,6 +34,7 @@ void cli_help(void) {
   printf("%s", "256bit Colors:\n");
   colors_reset();
   printf("%s", "ccolor 256 [NUM] | Sets the terminal text to NUM.\n");
+  printf("%s", "ccolor bg 256 [NUM] | Sets the terminal background to NUM.\n");
   colors_green();
   printf("%s", "Extended Colors:\n");
   colors_reset();
@@ -45,6 +46,14 @@ void cli_help(void) {
   printf("%s", "ccolor bright-magenta | Sets terminal text color to bright magenta.\n");
   printf("%s", "ccolor bright-cyan | Sets terminal text color to bright cyan.\n");
   printf("%s", "ccolor bright-white | Sets terminal text color to bright white.\n");
+  printf("%s", "ccolor bg bright-black | Sets terminal background color to bright black.\n");
+  printf("%s", "ccolor bg bright-red | Sets terminal background color to bright red.\n");
+  printf("%s", "ccolor bg bright-green | Sets terminal background color to bright green.\n");
+  printf("%s", "ccolor bg bright-yellow | Sets terminal background color to bright yellow.\n");
+  printf("%s", "ccolor bg bright-blue | Sets terminal background color to bright-blue.\n");
+  printf("%s", "ccolor bg bright-magenta | Sets terminal background color to bright magenta.\n");
+  printf("%s", "ccolor bg bright-cyan | Sets terminal background color to bright cyan.\n");
+  printf("%s", "ccolor bg bright-white | Sets terminal background color to bright white.\n");
   colors_green();
   printf("%s", "Basic Colors:\n");
   colors_reset();
@@ -56,6 +65,14 @@ void cli_help(void) {
   printf("%s", "ccolor magenta | Sets terminal text color to magenta.\n");
   printf("%s", "ccolor cyan | Sets terminal text color to cyan.\n");
   printf("%s", "ccolor white | Sets terminal text color to white.\n");
+  printf("%s", "ccolor bg black | Sets terminal background color to black.\n");
+  printf("%s", "ccolor bg red | Sets terminal background color to red.\n");
+  printf("%s", "ccolor bg green | Sets terminal background color to green.\n");
+  printf("%s", "ccolor bg yellow | Sets terminal background color to yellow.\n");
+  printf("%s", "ccolor bg blue | Sets terminal background color to blue.\n");
+  printf("%s", "ccolor bg magenta | Sets terminal background color to magenta.\n");
+  printf("%s", "ccolor bg cyan | Sets terminal background color to cyan.\n");
+  printf("%s", "ccolor bg white | Sets terminal background color to white.\n");
 }
 
 int main(int argc, char* argv[]) {
@@ -63,6 +80,87 @@ int main(int argc, char* argv[]) {
     if(strcmp(argv[argc - 1], "--help") == 0 || strcmp(argv[argc - 1], "-h") == 0) {
       cli_help();
       return 0;
+    }
+    else if(argc >= 3 && strcmp(argv[1], "bg") == 0) {
+      if(argc == 4 && strcmp(argv[2], "256") == 0) {
+        int val = atoi(argv[3]);
+        if(val < 0 || val > 256) {
+          fcolors_red(stderr);
+          fprintf(stderr, "%s%d%s", "The bg 256 option requires a number between 0 and 256 but received: ", val, "\n");
+          fcolors_reset(stderr);
+          return -1;
+        }
+        colors_bg_256(val);
+        return 0;
+      }
+      else if(strcmp(argv[3], "black") == 0) {
+        colors_bg_black();
+        return 0;
+      }
+      else if(strcmp(argv[3], "red") == 0) {
+        colors_bg_red();
+        return 0;
+      }
+      else if(strcmp(argv[3], "green") == 0) {
+        colors_bg_green();
+        return 0;
+      }
+      else if(strcmp(argv[3], "yellow") == 0) {
+        colors_bg_yellow();
+        return 0;
+      }
+      else if(strcmp(argv[3], "blue") == 0) {
+        colors_bg_blue();
+        return 0;
+      }
+      else if(strcmp(argv[3], "magenta") == 0) {
+        colors_bg_magenta();
+        return 0;
+      }
+      else if(strcmp(argv[3], "cyan") == 0) {
+        colors_bg_cyan();
+        return 0;
+      }
+      else if(strcmp(argv[3], "white") == 0) {
+        colors_bg_black();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-black") == 0) {
+        colors_bg_bright_black();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-red") == 0) {
+        colors_bg_bright_red();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-green") == 0) {
+        colors_bg_bright_green();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-yellow") == 0) {
+        colors_bg_bright_yellow();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-blue") == 0) {
+        colors_bg_bright_blue();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-magenta") == 0) {
+        colors_bg_bright_magenta();
+        return 0;
+      }
+      else if(strcmp(argv[3], "bright-white") == 0) {
+        colors_bg_bright_white();
+        return 0;
+      }
+      else {
+        // Could not find any options, error.
+        fcolors_red(stderr);
+        fprintf(stderr, "%s%s%s", "Unknown bg argument: ", argv[argc - 1], "\n");
+        fcolors_reset(stderr);
+        cli_help();
+        return -1;
+      }
     }
     else if(argc == 3 && strcmp(argv[1], "256") == 0) {
       int val = atoi(argv[2]);

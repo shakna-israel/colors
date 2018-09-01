@@ -13,7 +13,7 @@ void colors_clear(void) {
 
 void fcolors_clear(FILE* out) {
   fprintf(out, "%s", "\x1b[2J\x1b[1;1H");
-  fflush(out);  
+  fflush(out);
 }
 
 void colors_reset(void) {
