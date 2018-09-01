@@ -23,11 +23,11 @@ void cli_help(void) {
   printf("%s", "Warning: ccolor does not check for terminal support.\n");
   colors_reset();
   printf("%s", "---\n");
-  printf("%s", "ccolor --help | Show this message and exit.\n");
-  printf("%s", "ccolor -h | Show this message and exit.\n");
   colors_green();
   printf("%s", "Useful Options:\n");
   colors_reset();
+  printf("%s", "ccolor --help | Show this message and exit.\n");
+  printf("%s", "ccolor -h | Show this message and exit.\n");
   printf("%s", "ccolor clear | Clear the terminal.\n");
   printf("%s", "ccolor reset | Remove any formatting options on the terminal.\n");
   colors_green();
