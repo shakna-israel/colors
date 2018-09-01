@@ -5,7 +5,7 @@
 
 // Semantic Versioning
 int vmajor = 1;
-int vminor = 1;
+int vminor = 2;
 int vpatch = 2;
 
 // Note:
