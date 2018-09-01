@@ -22,6 +22,10 @@ A library and console application for tweaking colors on the console.
 
 ---
 
+[![asciinema demo](https://screenshots.firefox.com/enHLzsGdHInGF0oY/asciinema.org)](https://asciinema.org/a/VBflIrV4ImWs2JDtbQt5j6qxJ)
+
+---
+
 # Library
 
 ccolor is a header-only library written in C99.
