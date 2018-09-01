@@ -283,7 +283,7 @@ colors_reset();
 These functions can change at any time, and are ***not*** part of the API. However you might find them helpful to run or examine when constructing a program.
 
 
-``` colors_unstable_show_256(void)``` - This function displays all 256 colors that can be used with ```colors_256``` and ```fcolors_256```.
+``` colors_unstable_show_256(void)``` - This function displays all 512 colors that can be used with ```colors_256```, ```fcolors_256```, ```colors_bg_256```, and ```fcolors_bg_256```.
 
 ---
 
