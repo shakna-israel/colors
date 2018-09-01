@@ -35,3 +35,6 @@ install: ccolor
 uninstall:
 	rm $(PREFIX)/bin/ccolor
 	rm -rf $(PREFIX)/ccolor
+
+.PHONY: update
+update: uninstall install
