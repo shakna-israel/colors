@@ -314,6 +314,11 @@ void colors_unstable_show_256(void) {
     printf("%d\n", i);
     colors_reset();
   }
+  for(int i = 0; i < 256; i++) {
+    colors_bg_256(i);
+    printf("%d\n", i);
+    colors_reset();
+  }
 }
 
 #define MILNE_CCOLORS

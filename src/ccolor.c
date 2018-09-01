@@ -6,7 +6,7 @@
 // Semantic Versioning
 int vmajor = 1;
 int vminor = 1;
-int vpatch = 1;
+int vpatch = 2;
 
 // Note:
 // It is sensible that we can output colors, that's the point!
@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
         int val = atoi(argv[3]);
         if(val < 0 || val > 256) {
           fcolors_red(stderr);
-          fprintf(stderr, "%s%d%s", "The bg 256 option requires a number between 0 and 256 but received: ", val, "\n");
+          fprintf(stderr, "%s%d%s", "Error: Thebg 256 option requires a number between 0 and 256 but received: ", val, "\n");
           fcolors_reset(stderr);
           return -1;
         }
@@ -156,7 +156,7 @@ int main(int argc, char* argv[]) {
       else {
         // Could not find any options, error.
         fcolors_red(stderr);
-        fprintf(stderr, "%s%s%s", "Unknown bg argument: ", argv[argc - 1], "\n");
+        fprintf(stderr, "%s%s%s", "Error: Unknown bg argument: ", argv[argc - 1], "\n");
         fcolors_reset(stderr);
         cli_help();
         return -1;
@@ -166,7 +166,7 @@ int main(int argc, char* argv[]) {
       int val = atoi(argv[2]);
       if(val < 0 || val > 256) {
         fcolors_red(stderr);
-        fprintf(stderr, "%s%d%s", "The 256 option requires a number between 0 and 256 but received: ", val, "\n");
+        fprintf(stderr, "%s%d%s", "Error: The 256 option requires a number between 0 and 256 but received: ", val, "\n");
         fcolors_reset(stderr);
         return -1;
       }
@@ -248,7 +248,7 @@ int main(int argc, char* argv[]) {
     else {
       // Could not find any options, error.
       fcolors_red(stderr);
-      fprintf(stderr, "%s%s%s", "Unknown argument: ", argv[argc - 1], "\n");
+      fprintf(stderr, "%s%s%s", "Error: Unknown argument: ", argv[argc - 1], "\n");
       fcolors_reset(stderr);
       cli_help();
       return -1;
