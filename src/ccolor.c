@@ -6,7 +6,7 @@
 // Semantic Versioning
 int vmajor = 1;
 int vminor = 2;
-int vpatch = 2;
+int vpatch = 0;
 
 // Note:
 // It is sensible that we can output colors, that's the point!
