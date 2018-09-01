@@ -32,5 +32,6 @@ install: ccolor
 	ln -s $(PREFIX)/ccolor/ccolor $(PREFIX)/bin/ccolor
 
 .PHONY: uninstall
+uninstall:
 	rm $(PREFIX)/bin/ccolor
 	rm -rf $(PREFIX)/ccolor
