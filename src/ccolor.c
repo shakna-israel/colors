@@ -101,63 +101,63 @@ int main(int argc, char* argv[]) {
         colors_bg_256(val);
         return 0;
       }
-      else if(strcmp(argv[3], "black") == 0) {
+      else if(strcmp(argv[2], "black") == 0) {
         colors_bg_black();
         return 0;
       }
-      else if(strcmp(argv[3], "red") == 0) {
+      else if(strcmp(argv[2], "red") == 0) {
         colors_bg_red();
         return 0;
       }
-      else if(strcmp(argv[3], "green") == 0) {
+      else if(strcmp(argv[2], "green") == 0) {
         colors_bg_green();
         return 0;
       }
-      else if(strcmp(argv[3], "yellow") == 0) {
+      else if(strcmp(argv[2], "yellow") == 0) {
         colors_bg_yellow();
         return 0;
       }
-      else if(strcmp(argv[3], "blue") == 0) {
+      else if(strcmp(argv[2], "blue") == 0) {
         colors_bg_blue();
         return 0;
       }
-      else if(strcmp(argv[3], "magenta") == 0) {
+      else if(strcmp(argv[2], "magenta") == 0) {
         colors_bg_magenta();
         return 0;
       }
-      else if(strcmp(argv[3], "cyan") == 0) {
+      else if(strcmp(argv[2], "cyan") == 0) {
         colors_bg_cyan();
         return 0;
       }
-      else if(strcmp(argv[3], "white") == 0) {
+      else if(strcmp(argv[2], "white") == 0) {
         colors_bg_black();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-black") == 0) {
+      else if(strcmp(argv[2], "bright-black") == 0) {
         colors_bg_bright_black();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-red") == 0) {
+      else if(strcmp(argv[2], "bright-red") == 0) {
         colors_bg_bright_red();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-green") == 0) {
+      else if(strcmp(argv[2], "bright-green") == 0) {
         colors_bg_bright_green();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-yellow") == 0) {
+      else if(strcmp(argv[2], "bright-yellow") == 0) {
         colors_bg_bright_yellow();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-blue") == 0) {
+      else if(strcmp(argv[2], "bright-blue") == 0) {
         colors_bg_bright_blue();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-magenta") == 0) {
+      else if(strcmp(argv[2], "bright-magenta") == 0) {
         colors_bg_bright_magenta();
         return 0;
       }
-      else if(strcmp(argv[3], "bright-white") == 0) {
+      else if(strcmp(argv[2], "bright-white") == 0) {
         colors_bg_bright_white();
         return 0;
       }
