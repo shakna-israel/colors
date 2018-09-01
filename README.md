@@ -122,6 +122,26 @@ colors_reset();
 
 ```fcolors_reset(FILE* out)``` - This function removes any styling currently on the given file.
 
+```colors_bold(void)``` - Set the text on stdout to bold. Clear this option using ```colors_reset```.
+
+```fcolors_bold(FILE* out)``` - Set the text on the given file to bold. Clear this option using ```fcolors_reset```.
+
+```colors_underline(void)``` - Set the the text on stdout to underlined. Clear this option using ```colors_reset```.
+
+```fcolors_underline(FILE* out)``` - Set the text on the given file to underlined. Clear this option using ```fcolors_reset```.
+
+```colors_blink(void)``` - Set the text on stdout to blinking. (Note: Poor support in modern terminals.) Clear this option using ```colors_reset```.
+
+```fcolors_blink(FILE* out)``` - Set the text on the given file to blinking. (Note: Poor support in modern terminals.) Clear this option using ```fcolors_reset```.
+
+```colors_reversed(void)``` - Set the text to stdout to reversed. Clear this option using ```colors_reset```.
+
+```fcolors_reversed(FILE* out)``` - Set the text on the given file to reversed. Clear this option using ```fcolors_reset```.
+
+```colors_invisible(void)``` - Set the text on stdout to invisible. Clear this option using ```colors_reset```.
+
+```fcolors_invisible(FILE* out)``` - Set the text on the given file to invisible. Clear this option using ```fcolors_reset```.
+
 ```colors_256(unsigned int num)``` - This sets the text color on stdout to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
 
 ```fcolors_256(FILE* out, unsigned int num)``` - This sets the text color on the given file to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
