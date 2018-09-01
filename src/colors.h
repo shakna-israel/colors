@@ -11,6 +11,11 @@ void colors_clear(void) {
   fflush(stdout);
 }
 
+void fcolors_clear(FILE* out) {
+  fprintf(out, "%s", "\x1b[2J\x1b[1;1H");
+  fflush(out);
+}
+
 void colors_reset(void) {
   printf("%s", "\x1b[0m");
   // Reset should apply immediately, so flush.
@@ -158,6 +163,146 @@ void colors_256(unsigned int num) {
 void fcolors_256(FILE* out, unsigned int num) {
   assert(num < 256);
   fprintf(out, "%s%d%s", "\x1b[38;5;", num, "m");
+}
+
+void colors_bg_256(unsigned int val) {
+  assert(num < 256);
+  printf("%s%d%s", "\x1b[48;5;", num, "m");
+  fflush(stdout);
+}
+
+void fcolors_bg_256(FILE* out, unsigned int val) {
+  assert(num < 256);
+  fprintf(out, "%s%d%s", "\x1b[48;5;", num, "m");
+  fflush(out);
+}
+
+void colors_bg_black(void) {
+  printf("%s", "\x1b[40m");
+}
+
+void fcolors_bg_black(FILE* out) {
+  fprintf(out, "%s", "\x1b[40m");
+}
+
+void colors_bg_red(void) {
+  printf("%s", "\x1b[41m");
+}
+
+void fcolors_bg_red(FILE* out) {
+  fprintf(out, "%s", "\x1b[41m");
+}
+
+void colors_bg_green(void) {
+  printf("%s", "\x1b[42m");
+}
+
+void fcolors_bg_green(FILE* out) {
+  fprintf(out, "%s", "\x1b[42m");
+}
+
+void colors_bg_yellow(void) {
+  printf("%s", "\x1b[43m");
+}
+
+void fcolors_bg_yellow(FILE* out) {
+  fprintf(out, "%s", "\x1b[43m");
+}
+
+void colors_bg_blue(void) {
+  printf("%s", "\x1b[44m");
+}
+
+void fcolors_bg_blue(FILE* out) {
+  fprintf(out, "%s", "\x1b[44m");
+}
+
+void colors_bg_magenta(void) {
+  printf("%s", "\x1b[45m");
+}
+
+void fcolors_bg_magenta(FILE* out) {
+  fprintf(out, "%s", "\x1b[45m");
+}
+
+void colors_bg_cyan(void) {
+  printf("%s", "\x1b[46m");
+}
+
+void fcolors_bg_cyan(FILE* out) {
+  fprintf(out, "%s", "\x1b[46m");
+}
+
+void colors_bg_white(void) {
+  printf("%s", "\x1b[47m");
+}
+
+void fcolors_bg_white(FILE* out) {
+  fprintf(out, "%s", "\x1b[47m");
+}
+
+void colors_bg_bright_black(void) {
+  printf("%s", "\x1b[40;1m");
+}
+
+void fcolors_bg_bright_black(FILE* out) {
+  fprintf(out, "%s", "\x1b[40;1m");
+}
+
+void colors_bg_bright_red(void) {
+  printf("%s", "\x1b[41;1m");
+}
+
+void fcolors_bg_bright_red(FILE* out) {
+  fprintf(out, "%s", "\x1b[41;1m");
+}
+
+void colors_bg_bright_green(void) {
+  printf("%s", "\x1b[42;1m");
+}
+
+void fcolors_bg_bright_green(FILE* out) {
+  fprintf(out, "%s", "\x1b[42;1m");
+}
+
+void colors_bg_bright_yellow(void) {
+  printf("%s", "\x1b[43;1m");
+}
+
+void fcolors_bg_bright_yellow(FILE* out) {
+  fprintf(out, "%s", "\x1b[43;1m");
+}
+
+void colors_bg_bright_blue(void) {
+  printf("%s", "\x1b[44;1m");
+}
+
+void fcolors_bg_bright_blue(FILE* out) {
+  fprintf(out, "%s", "\x1b[44;1m");
+}
+
+void colors_bg_bright_magenta(void) {
+  printf("%s", "\x1b[45;1m");
+}
+
+void fcolors_bg_bright_magenta(FILE* out) {
+  fprintf(out, "%s", "\x1b[45;1m");
+}
+
+void colors_bg_bright_cyan(void) {
+  printf("%s", "\x1b[46;1m");
+}
+
+void fcolors_bg_bright_cyan(FILE* out) {
+  fprintf(out, "%s", "\x1b[46;1m");
+}
+
+void colors_bg_bright_white(void) {
+  printf("%s", "\x1b[47;1m");
+}
+
+void fcolors_bg_bright_white(FILE* out) {
+  fprintf(out, "%s", "\x1b[47;1m");
 }
 
 // This is just a helper function,
