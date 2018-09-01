@@ -4,6 +4,24 @@ A library and console application for tweaking colors on the console.
 
 ---
 
+## Table of Contents
+
+- [Library](#library)
+- [CLI Application](#cli-application)
+  * [Compiling](#compiling)
+    + [Prequisites:](#prequisites-)
+    + [Compiling:](#compiling-)
+    + [Installing:](#installing-)
+  * [Usage](#usage)
+- [Platform Support](#platform-support)
+- [Colors API](#colors-api)
+  * [Usage](#usage-1)
+  * [Functions](#functions)
+  * [Unstable](#unstable)
+- [LICENSE](#license)
+
+---
+
 # Library
 
 ccolor is a header-only library written in C99.
