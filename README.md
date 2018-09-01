@@ -22,7 +22,7 @@ A library and console application for tweaking colors on the console.
 
 ---
 
-[![asciinema demo](https://screenshots.firefox.com/enHLzsGdHInGF0oY/asciinema.org)](https://asciinema.org/a/VBflIrV4ImWs2JDtbQt5j6qxJ)
+[![asciinema demo](https://screenshotscdn.firefoxusercontent.com/images/7b46a3e8-c9de-458a-b5b1-c01237826bd6.png)](https://asciinema.org/a/VBflIrV4ImWs2JDtbQt5j6qxJ)
 
 ---
 
