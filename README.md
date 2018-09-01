@@ -69,7 +69,7 @@ Run ```make install``` in the top directory of ccolor.
 
 ## Usage
 
-ccolor sets a color, but does not flush the stdout buffer, except for the reset and clear commands.
+ccolor sets a color, but does not flush the stdout buffer, except for the reset and clear commands, for both text and background variants.
 
 So a simple script might look like:
 
@@ -92,7 +92,7 @@ Linux is fully supported and maintained.
 
 macOS is untested, but should have full support.
 
-Windows is untested, and though ansi.sys should work (as no *nix specific options have been used), there may be some issues. Feel free to report them, and I'll see what I can do.
+Windows is untested, and though ansi.sys should work (as no \*nix specific options have been used), there may be some issues. Feel free to report them, and I'll see what I can do.
 
 ---
 
@@ -118,13 +118,13 @@ colors_reset();
 
 ```fcolors_clear(FILE* out)``` - Clears the given file (but doesn't destroy written bits), this also flushes the given file.
 
-```colors_256(unsigned int num)``` - This sets the text color on stdout to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
-
-```fcolors_256(FILE* out, unsigned int num)``` - This sets the text color on the given file to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
-
 ```colors_reset(void)``` - This function removes any styling currently on stdout. This also flushes stdout.
 
 ```fcolors_reset(FILE* out)``` - This function removes any styling currently on the given file.
+
+```colors_256(unsigned int num)``` - This sets the text color on stdout to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
+
+```fcolors_256(FILE* out, unsigned int num)``` - This sets the text color on the given file to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
 
 ```colors_black(void)``` - This sets the text color on stdout to black.
 
@@ -189,6 +189,74 @@ colors_reset();
 ```colors_bright_white(void)``` - This sets the text color on stdout to bright white.
 
 ```fcolors_bright_white(FILE* out)``` - This sets the text color on the given file to bright white.
+
+```colors_bg_256(unsigned int num)``` - This sets the background color on stdout to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
+
+```fcolors_bg_256(FILE* out, unsigned int num)``` - This sets the background color on the given file to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
+
+```colors_bg_black(void)``` - This sets the background color on stdout to black.
+
+```fcolors_bg_black(FILE* out)``` - This sets the background color on the given file to black.
+
+```colors_bg_red(void)``` - This sets the background color on stdout to red.
+
+```fcolors_bg_red(FILE* out)``` - This sets the background color on the given file to red.
+
+```colors_bg_green(void)``` - This sets the background color on stdout to green.
+
+```fcolors_bg_green(FILE* out)``` - This sets the background color on the given file to green.
+
+```colors_bg_yellow(void)``` - This sets the background color on stdout to yellow.
+
+```fcolors_bg_yellow(FILE* out)``` - This sets the background color on the given file to yellow.
+
+```colors_bg_blue(void)``` - This sets the background color on stdout to blue.
+
+```fcolors_bg_blue(FILE* out)``` - This sets the background color on the given file to blue.
+
+```colors_bg_magenta(void)``` - This sets the background color on stdout to magenta.
+
+```fcolors_bg_magenta(FILE* out)``` - This sets the background color on the given file to magenta.
+
+```colors_bg_cyan(void)``` - This sets the background color on stdout to cyan.
+
+```fcolors_bg_cyan(FILE* out)``` - This sets the background color on the given file to cyan.
+
+```colors_bg_white(void)``` - This sets the background color on stdout to white.
+
+```fcolors_bg_white(FILE* out)``` - This sets the background color on the given file to white.
+
+```colors_bg_bright_black(void)``` - This sets the background color on stdout to bright black.
+
+```fcolors_bg_bright_black(FILE* out)``` - This sets the background color on the given file to bright black.
+
+```colors_bg_bright_red(void)``` - This sets the background color on stdout to bright red.
+
+```fcolors_bg_bright_red(FILE* out)``` - This sets the background color on the given file to bright red.
+
+```colors_bg_bright_green(void)``` - This sets the background color on stdout to bright green.
+
+```fcolors_bg_bright_green(FILE* out)``` - This sets the background color on the given file to bright green.
+
+```colors_bg_bright_yellow(void)``` - This sets the background color on stdout to bright yellow.
+
+```fcolors_bg_bright_yellow(FILE* out)``` - This sets the background color on the given file to bright yellow.
+
+```colors_bg_bright_blue(void)``` - This sets the background color on stdout to bright blue.
+
+```fcolors_bg_bright_blue(FILE* out)``` - This sets the background color on the given file to bright blue.
+
+```colors_bg_bright_magenta(void)``` - This sets the background color on stdout to bright magenta.
+
+```fcolors_bg_bright_magenta(FILE* out)``` - This sets the background color on the given file to bright magenta.
+
+```colors_bg_bright_cyan(void)``` - This sets the background color on stdout to bright cyan.
+
+```fcolors_bg_bright_cyan(FILE* out)``` - This sets the background color on the given file to bright cyan.
+
+```colors_bg_bright_white(void)``` - This sets the background color on stdout to bright white.
+
+```fcolors_bg_bright_white(FILE* out)``` - This sets the background color on the given file to bright white.
 
 ## Unstable
 
