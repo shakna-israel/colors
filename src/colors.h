@@ -64,7 +64,7 @@ void colors_invisible(void) {
 }
 
 void fcolors_invisible(FILE* out) {
-  printf(out, "%s", "\x1b[8m");
+  fprintf(out, "%s", "\x1b[8m");
 }
 
 void colors_black(void) {
