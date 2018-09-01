@@ -31,6 +31,14 @@ void cli_help(void) {
   printf("%s", "ccolor clear | Clear the terminal.\n");
   printf("%s", "ccolor reset | Remove any formatting options on the terminal.\n");
   colors_green();
+  printf("%s", "Text Decorations:\n");
+  colors_reset();
+  printf("%s", "ccolor bold | Set the terminal to bold text.\n");
+  printf("%s", "ccolor underline | Set the terminal to underline text.\n");
+  printf("%s", "ccolor blink | Set the terminal to blinking text.\n");
+  printf("%s", "ccolor reversed | Set the terminal to reversed text.\n");
+  printf("%s", "ccolor invisible | Set the terminal to invisible text.\n");
+  colors_green();
   printf("%s", "256bit Colors:\n");
   colors_reset();
   printf("%s", "ccolor 256 [NUM] | Sets the terminal text to NUM.\n");
@@ -171,6 +179,26 @@ int main(int argc, char* argv[]) {
         return -1;
       }
       colors_256(val);
+      return 0;
+    }
+    else if(strcmp(argv[argc - 1], "bold") == 0) {
+      colors_bold();
+      return 0;
+    }
+    else if(strcmp(argv[argc - 1], "underline") == 0) {
+      colors_underline();
+      return 0;
+    }
+    else if(strcmp(argv[argc - 1], "blink") == 0) {
+      colors_blink();
+      return 0;
+    }
+    else if(strcmp(argv[argc - 1], "reversed") == 0) {
+      colors_reversed();
+      return 0;
+    }
+    else if(strcmp(argv[argc - 1], "invisible") == 0) {
+      colors_invisible();
       return 0;
     }
     else if(strcmp(argv[argc - 1], "reset") == 0) {
