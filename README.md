@@ -116,6 +116,8 @@ colors_reset();
 
 ```colors_clear(void)``` - Clears the console, this also flushes stdout.
 
+```fcolors_clear(FILE* out)``` - Clears the given file (but doesn't destroy written bits), this also flushes the given file.
+
 ```colors_256(unsigned int num)``` - This sets the text color on stdout to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.
 
 ```fcolors_256(FILE* out, unsigned int num)``` - This sets the text color on the given file to the given 256bit color. If given an invalid range, it *will* crash using ```assert```.

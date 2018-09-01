@@ -11,6 +11,11 @@ void colors_clear(void) {
   fflush(stdout);
 }
 
+void fcolors_clear(FILE* out) {
+  fprintf(out, "%s", "\x1b[2J\x1b[1;1H");
+  fflush(out);  
+}
+
 void colors_reset(void) {
   printf("%s", "\x1b[0m");
   // Reset should apply immediately, so flush.
