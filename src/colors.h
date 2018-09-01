@@ -166,14 +166,14 @@ void fcolors_256(FILE* out, unsigned int num) {
 }
 
 void colors_bg_256(unsigned int val) {
-  assert(num < 256);
-  printf("%s%d%s", "\x1b[48;5;", num, "m");
+  assert(val < 256);
+  printf("%s%d%s", "\x1b[48;5;", val, "m");
   fflush(stdout);
 }
 
 void fcolors_bg_256(FILE* out, unsigned int val) {
-  assert(num < 256);
-  fprintf(out, "%s%d%s", "\x1b[48;5;", num, "m");
+  assert(val < 256);
+  fprintf(out, "%s%d%s", "\x1b[48;5;", val, "m");
   fflush(out);
 }
 
